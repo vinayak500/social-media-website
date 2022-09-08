@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/signup.css">
+<div id="outer-container">
+    <div id="inner-container">
+        
+       <h2 id="heading"> CODEIAL! </h2>
+       <p class="description"> Codeial is where fans from around the world can gather to discuss anime!  </p>
+       <p class="description">
+        All anime fans are welcome.
+       </p>
+     <form  action="/user/create" method="POST">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter Name" required>
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email" required>
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+        </div>
+
+        <div>
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm_password" placeholder="Enter Password" required>
+        </div>
+    
+        <div id="button">
+            <input type="submit" value="Sign Up!">
+        </div>
+    </form>
+
+    </div>
+</div>
