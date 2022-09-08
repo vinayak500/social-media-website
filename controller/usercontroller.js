@@ -26,6 +26,18 @@ module.exports.signin = function(req , res){
 }; 
 
 
+module.exports.destroysession = function(req , res){
+
+  //logout function is given to request by passport
+  req.logout(function(err) {
+    if (err) { return next(err); }
+
+    res.redirect('/');
+  });
+}; 
+
+
+
 module.exports.profile = function(req , res){
   // if(req.cookies.user_id)
   // {

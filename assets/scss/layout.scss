@@ -1,0 +1,33 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+header{
+    background-color: black;
+    color:white;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+   padding-right:40px;
+   height:50px;
+   margin:0px;
+}
+
+header a{
+    color:white;
+}
+
+
+
+header h2{
+    margin-left:20px;
+    margin-bottom: 10px;
+}
+
+
+html , body{
+    margin:0px;
+    width:100vw;
+    max-height: 100vh;
+}
