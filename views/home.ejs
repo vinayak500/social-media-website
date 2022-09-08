@@ -21,7 +21,7 @@
                         <ul>
                           <% for(post of posts){ %>
                           
-                          <li> 
+                          <!-- <li> 
                             <p>
                               <%= post.content %> 
                               <br>
@@ -62,7 +62,8 @@
                               </div>
                             </div>
                           </p>
-                          </li>
+                          </li> -->
+                          <%- include('_post.ejs'); -%> 
                           <% } %>
                         </ul>
               
