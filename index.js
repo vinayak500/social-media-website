@@ -14,6 +14,10 @@ const cookieParser = require('cookie-parser');
 //node-sass-middleware
 // const sassMiddleware = require('node-sass-middleware');
 
+
+const flash = require('connect-flash');
+const customMware = require('./config/middleware');
+
 // app.use(sassMiddleware({
 //     src: './assets/scss',
 //     dest: './assets/css',
@@ -21,6 +25,10 @@ const cookieParser = require('cookie-parser');
 //     outputStyle: 'extended' ,
 //     prefix: '/css' 
 // }));
+
+
+
+
 
 app.use(express.urlencoded());
 
@@ -63,6 +71,10 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
+
+
+app.use(flash());
+app.use(customMware.setFlash);
 
 app.use('/' , require('./routes/index'));
 

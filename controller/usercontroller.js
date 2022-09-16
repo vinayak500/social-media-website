@@ -31,7 +31,8 @@ module.exports.destroysession = function(req , res){
   //logout function is given to request by passport
   req.logout(function(err) {
     if (err) { return next(err); }
-
+     
+    req.flash('success' , 'You have logged out');
     res.redirect('/');
   });
 }; 
