@@ -1,9 +1,11 @@
 <link rel="stylesheet" href="/css/home.css">
   <div id="container">
         <section id="profile-info">
-           <h3>
-            <a href="/user/profile"> <%= user.name  %>  </a>   
-           </h3>
+          <% if(locals.user){ %> 
+            <h3>
+              <a href="/user/profile">  <%= locals.user.name %> </a>
+            </h3>
+            <% } %>
         </section>
 
 
@@ -72,10 +74,17 @@
               </section>
         
         
-        
-              <section id="message-section">
-        
-        </section>
+              <section id="messages-and-friends">
+                <div id="friends">
+                  <h4> Friends </h4>
+                <% for(u of all_users) { %>
+                        <p>
+                          <a href="user/profile/<%= u.id %>"> <%=  u.name  %></a>
+                        </p>
+                      <%  }  %>     
+                </div>
+
+              </section>
   </div>
 
   
