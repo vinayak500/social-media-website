@@ -1,9 +1,20 @@
 <link rel="stylesheet" href="/css/userprofile.css">
 <% if(user.id == profile_user.id) {%>
     <!-- user matches shoe the form -->
- <form action="/user/update/<%= profile_user.id %>" method="POST">
-    <input type="text" name="name" placeholder="Your Name" value="<%= profile_user.name %>" required >
-    <input type="text" name="email" placeholder="Your Email" value="<%= profile_user.email %>" required >
+ <!-- <form action="/user/update/<%= profile_user.id %>" method="POST"> -->
+   <form action="/user/update/<%= profile_user.id %>" enctype="multipart/form-data" method="POST">
+
+         <img id="image1" src="<%= user.avatar %>" alt="<%= user.name %>">
+      <br>
+      <label for="name"> Name: </label>
+    <input type="text" id="name" name="name" placeholder="Your Name" value="<%= profile_user.name %>" required >
+    <br>
+    <label for="email">Email:</label>
+    <input type="text" id="email"name="email" placeholder="Your Email" value="<%= profile_user.email %>" required >
+    <br>
+    <label for="picture"> Select Profile picture: </label>
+    <input type="file" id="picture" name="avatar" placeholder="Profile Picture" >
+    <br>
     <input type="submit" value="update">
  </form>
           <% }else{ %>

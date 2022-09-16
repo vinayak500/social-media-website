@@ -36,6 +36,8 @@ app.use(cookieParser());
 
 //search for all the css , js , image file in assets folder
 app.use(express.static('./assets'));
+//make the uploads path available for the browser
+app.use('/uploads',express.static(__dirname+'/uploads'));
 
 app.set('layout extractStyles' , true);
 app.set('layout extractScripts' , true);

@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/post.css">
 <li> 
     <p>
 
@@ -5,6 +6,7 @@
 
       <br>
        <small>
+        <img id="image2" src="<%= post.user.avatar %>" alt="<%= post.user.name %>">
          <%= post.user.name %>
        </small>
        <% if ((locals.user) && (locals.user.id == post.user.id)){ %>

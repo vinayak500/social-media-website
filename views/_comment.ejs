@@ -3,6 +3,7 @@
     <%= comment.content %>
     <br>
     <small>
+      <img id="image2" src="<%= comment.user.avatar %>" alt="<%= comment.user.name %>" width="100" height="100">
       <%= comment.user.name %>
     </small>
     <% if ((locals.user) && (locals.user.id == comment.user.id)){ %>
