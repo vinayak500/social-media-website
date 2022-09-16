@@ -4,10 +4,15 @@ footer{
 
 
 form input{
-    margin: 20px;
+    margin-top: 20px;
 }
 
 #image1{
     height:100px;
     width:100px;
+}
+
+
+label{
+    font-weight: 600;
 }
